@@ -1,12 +1,11 @@
-// import {User} from '../profile/profile'
-import { User } from './profile/profile';
-// import {Container} from './App.styled';
+import { Layout } from './App.styled';
+import { User } from '../profile/profile';
+import user from '../../path/user.json';
 
 export const App = () => {
   return (
-    <div >
-      <User />
-    </div>
+    // <Layout><Layout/>
+    <User user={user} />
   );
 };
 

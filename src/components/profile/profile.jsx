@@ -1,33 +1,40 @@
 import PropTypes from "prop-types";
+import { CardProfile } from "components/profile/profile.styled";
+import { Info } from "./profile.styled";
+import { Image } from "./profile.styled";
+import { Title } from "./profile.styled";
+import { Description } from "./profile.styled";
+import { StaticList } from "./profile.styled";
+import { ListItem } from "./profile.styled";
+import { StatValue } from "./profile.styled";
 
 export const User = ({ user: { username, tag, location, avatar, stats: {followers, likes, views} } }) => (
-    <div className="profile">
-    <div className="description">
-        <img
-        src={avatar}
-        alt="User avatar"
-        className="avatar"
-        />
-        <p className="name">Petra Marica</p>
-        <p className="tag">@pmarica</p>
-        <p className="location">Salvador, Brasil</p>
-    </div>
+    <CardProfile className="profile">
+        <Info>
+            <Image
+            src={avatar}
+            alt="User avatar"
+            />
+            <Title>{username}</Title>
+            <Description>@{tag}</Description>
+            <Description>{location}</Description>
+        </Info>
 
-    <ul className="stats">
-        <li>
-        <span className="label">Followers</span>
-        <span className="quantity">1000</span>
-        </li>
-        <li>
-        <span className="label">Views</span>
-        <span className="quantity">2000</span>
-        </li>
-        <li>
-        <span className="label">Likes</span>
-        <span className="quantity">3000</span>
-        </li>
-    </ul>
-    </div>
+        <StaticList>
+            <ListItem>
+                <span>Followers</span>
+                <StatValue>{followers}</StatValue>
+            </ListItem>
+            <ListItem>
+                <span>Views</span>
+                <StatValue>{views}</StatValue>
+            </ListItem>
+            <ListItem>
+                <span>Likes</span>
+                <StatValue>{likes}</StatValue>
+            </ListItem>
+        </StaticList>
+    </CardProfile>
 )
 
 User.propTypes = {
