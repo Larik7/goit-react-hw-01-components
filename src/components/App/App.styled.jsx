@@ -1,5 +1,11 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
-export const Layout = styled.div`
+export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
     padding: 50px;
+    flex-direction: column;
+    background-color: #43DAD6;
 `;

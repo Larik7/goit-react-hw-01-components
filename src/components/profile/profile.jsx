@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { CardProfile } from "components/profile/profile.styled";
-import { Info } from "./profile.styled";
+import { UserInfo } from "./profile.styled";
 import { Image } from "./profile.styled";
 import { Title } from "./profile.styled";
 import { Description } from "./profile.styled";
@@ -10,7 +10,7 @@ import { StatValue } from "./profile.styled";
 
 export const User = ({ user: { username, tag, location, avatar, stats: {followers, likes, views} } }) => (
     <CardProfile className="profile">
-        <Info>
+        <UserInfo>
             <Image
             src={avatar}
             alt="User avatar"
@@ -18,7 +18,7 @@ export const User = ({ user: { username, tag, location, avatar, stats: {follower
             <Title>{username}</Title>
             <Description>@{tag}</Description>
             <Description>{location}</Description>
-        </Info>
+        </UserInfo>
 
         <StaticList>
             <ListItem>
