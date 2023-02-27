@@ -1,40 +1,42 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
+import { getRandomHexColor } from 'helpers/randomColor';
 
-export const Statistics = styled.section`
-
+export const SectionStats = styled.section`
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
 `;
 
-export const UploadStats = styled.h2`
-
+export const TitleStats = styled.h2`
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
 `;
 
 export const ListStat = styled.ul`
-
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
 `;
 
 export const ItemStats = styled.li`
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: ${getRandomHexColor};
+  padding: 20px;
+  color: #fff;
+  font-size: 16px;
 `;
 
-{/* <section class="statistics">
-  <h2 class="title">Upload stats</h2>
-
-  <ul class="stat-list">
-    <li class="item">
-      <span class="label">.docx</span>
-      <span class="percentage">4%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp3</span>
-      <span class="percentage">14%</span>
-    </li>
-    <li class="item">
-      <span class="label">.pdf</span>
-      <span class="percentage">41%</span>
-    </li>
-    <li class="item">
-      <span class="label">.mp4</span>
-      <span class="percentage">12%</span>
-    </li>
-  </ul>
-</section> */}
+export const Сoefficient = styled.span`
+  font-size: 30px;
+  font-weight: 300;
+`;
