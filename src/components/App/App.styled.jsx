@@ -9,3 +9,6 @@ export const Container = styled.section`
     flex-direction: column;
     background-color: #43DAD6;
 `;
+
+// 43DAD6
+// 1C95B3
